@@ -1,6 +1,6 @@
 FROM maven:3.5 
 WORKDIR /app
-COPY src .
+COPY src /app/src/
 COPY pom.xml .
 RUN mvn clean package
 ENV  CART_ENDPOINT=cart:8080 \
